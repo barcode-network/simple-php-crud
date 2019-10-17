@@ -1,8 +1,5 @@
-input {
-  display: block;
-  margin: '10px';
-}
+input,
 textarea {
   display: block;
-  margin: '10px';
+  margin: 10px;
 }

@@ -16,7 +16,12 @@
     if($_POST['login']){
         // print_r($_POST);
         //Do some verification checks
-        $_SESSION["isAuthenticated"] = true;
+
+        if($_POST['user_name'] == 'Shannon' && $_POST['user_password'] == 'password'){
+            $_SESSION["isAuthenticated"] = true;
+        }
+
+        
 
     }
 
