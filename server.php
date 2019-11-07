@@ -2,7 +2,7 @@
     $host = 'localhost';
     $username = 'root';
     $password = 'root'; //Your password may be an empty string
-    $database = 'class_db';
+    $database = 'test_uwi';
     
     //$conn is our database object
     $db = mysqli_connect($host, $username, $password, $database);

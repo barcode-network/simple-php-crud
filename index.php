@@ -6,27 +6,13 @@
 
 <html>
     <head>
-        <title>This is a title</title>
+        <title>Registration Test</title>
         
         <link href='style.css' rel="stylesheet"/>
         <script src="scripts.js"></script>
     </head>
     <body>
-        <!-- <p>
-            <?php 
-            echo "Hello world, this is ".$name
-            ?>
-        </p>
-        <ul>
-            <?php foreach($test_array as $test):?>
-                <li>Element: <?php echo $test;?></li>
-            <?php endforeach; ?>
-        </ul>
-        <ul>
-            <?php foreach($test_array2 as $key => $value):?>
-                <li><?=$key;?> <?=$value;?></li>
-            <?php endforeach; ?>
-        </ul> -->
+        
 
         <?php
             if(!$_SESSION['isAuthenticated']):
@@ -39,6 +25,8 @@
                 <input type='password' name='user_password' id='user_password' placeholder='Enter password'/>
                 <input type='submit' name='login' id="login" value="Login" />
             </form>
+
+            <a href='registration.php'>Sign up</a>
 
             <?php else: ?>
         <table>
