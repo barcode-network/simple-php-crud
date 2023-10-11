@@ -1,29 +1,31 @@
 <?php
-    $host = 'localhost';
-    $username = 'root';
-    $password = 'root'; //Your password may be an empty string
-    $database = 'class_db';
+    require __DIR__ . "/private/config.php";
+
+    $host = $config['database']['hostname'];
+    $username = $config['database']['username'];
+    $password = $config['database']['password']; //Your password may be an empty string
+    $database = $config['database']['database'];
     
     //$conn is our database object
     $db = mysqli_connect($host, $username, $password, $database);
-    if(!$db){
+    if(!$db) :
         die('Cannot connect to database');
-    }
+    else :
+     // echo "Successful Connection!";
+    endif;
 
     $_SESSION["userName"] = "Shannon";
     $_SESSION["isAuthenticated"] = false;
 
-    if($_POST['login']){
-        // print_r($_POST);
-        //Do some verification checks
+   if(isset($_POST['login'])){
+       print_r($_POST);
+        // Do some verification checks
 
         if($_POST['user_name'] == 'Shannon' && $_POST['user_password'] == 'password'){
             $_SESSION["isAuthenticated"] = true;
         }
 
-        
-
-    }
+   }
 
     include('comments.php');
 
